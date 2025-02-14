@@ -13,7 +13,7 @@ const app = new Hono<{ Variables: Variables }>();
 
 // Habilitar CORS
 app.use(cors({
-  origin: "http://localhost:3000", // Permitir solicitudes desde el frontend
+  origin: "*", // Permitir solicitudes desde el frontend
   credentials: true, // Permitir cookies y autenticación con credenciales
 }));
 
