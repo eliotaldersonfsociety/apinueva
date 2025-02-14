@@ -17,6 +17,11 @@ app.use(cors({
   credentials: true, // Permitir cookies y autenticación con credenciales
 }));
 
+// Ruta GET de prueba
+app.get("/", (c) => {
+  return c.json({ message: "API is working!" });
+});
+
 // Definir rutas
 app.route("/api/v1/auth", authRouter);
 app.route("/api/v1/posts", postRouter);
